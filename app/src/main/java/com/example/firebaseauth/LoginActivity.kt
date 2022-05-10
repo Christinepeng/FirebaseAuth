@@ -14,19 +14,19 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         val loginBottom: Button = findViewById(R.id.btn_login)
-        val email:EditText = findViewById(R.id.editTextTextEmailAddress)
-        val password:EditText = findViewById(R.id.editTextTextPassword)
+        val et_email:EditText = findViewById(R.id.editTextTextEmailAddress)
+        val et_password:EditText = findViewById(R.id.editTextTextPassword)
 
         loginBottom.setOnClickListener {
             when {
-                TextUtils.isEmpty(email.text.toString().trim { it <= ' '}) -> {
+                TextUtils.isEmpty(et_email.text.toString().trim { it <= ' '}) -> {
                     Toast.makeText(
                         this@LoginActivity,
                         "Please enter email.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-                TextUtils.isEmpty(password.text.toString().trim { it <= ' '}) -> {
+                TextUtils.isEmpty(et_password.text.toString().trim { it <= ' '}) -> {
                     Toast.makeText(
                         this@LoginActivity,
                         "Please enter password.",
