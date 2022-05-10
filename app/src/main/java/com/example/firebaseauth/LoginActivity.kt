@@ -26,6 +26,13 @@ class LoginActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
+                TextUtils.isEmpty(password.text.toString().trim { it <= ' '}) -> {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Please enter password.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
         }
     }
