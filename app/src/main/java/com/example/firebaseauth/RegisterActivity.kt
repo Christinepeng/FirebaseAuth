@@ -5,10 +5,9 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -21,6 +20,7 @@ class RegisterActivity : AppCompatActivity() {
         val registerBottom: Button = findViewById(R.id.btn_register)
         val et_email: EditText = findViewById(R.id.editTextTextEmailAddress)
         val et_password: EditText = findViewById(R.id.editTextTextPassword)
+        val btn_login: TextView = findViewById(R.id.tv_login)
 
         registerBottom.setOnClickListener {
             when {
@@ -70,6 +70,10 @@ class RegisterActivity : AppCompatActivity() {
                         }
                 }
             }
+        }
+
+        btn_login.setOnClickListener {
+            onBackPressed()
         }
     }
 }
