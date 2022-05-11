@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 class LoginActivity : AppCompatActivity() {
@@ -14,8 +15,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         val loginBottom: Button = findViewById(R.id.btn_login)
-        val et_email:EditText = findViewById(R.id.editTextTextEmailAddress)
-        val et_password:EditText = findViewById(R.id.editTextTextPassword)
+        val et_email: EditText = findViewById(R.id.editTextTextEmailAddress)
+        val et_password: EditText = findViewById(R.id.editTextTextPassword)
+        val registerBottom: TextView = findViewById(R.id.tv_register)
 
         loginBottom.setOnClickListener {
             when {
@@ -35,5 +37,9 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+
+//        registerBottom.setOnClickListener(
+//            intent
+//        )
     }
 }

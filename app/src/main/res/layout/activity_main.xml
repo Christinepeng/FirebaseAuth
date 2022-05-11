@@ -7,12 +7,50 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="60dp"
+        android:text="You are logged in successfully."
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_user_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="200dp"
+        android:text="LOGOUT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_email_id"
+        app:layout_constraintStart_toStartOf="@+id/tv_email_id" />
+
+    <TextView
+        android:id="@+id/tv_user_id"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        app:layout_constraintBottom_toTopOf="@+id/tv_email_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="123456789"
+        android:textAlignment="center"        />
+
+    <TextView
+        android:id="@+id/tv_email_id"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        app:layout_constraintBottom_toTopOf="@+id/btn_logout"
+        app:layout_constraintEnd_toEndOf="@+id/tv_user_id"
+        app:layout_constraintStart_toStartOf="@+id/tv_user_id"
+        android:text="abc@gmail.com"
+        android:textAlignment="center"    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
